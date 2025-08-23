@@ -1,0 +1,364 @@
+/* Print Styles for ISBA 4797 Syllabus */
+
+@media print {
+    /* Reset and base styles */
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+        -ms-filter: none !important;
+    }
+
+    /* Page setup */
+    @page {
+        margin: 0.75in;
+        size: letter;
+    }
+
+    body {
+        font-family: 'Times New Roman', serif;
+        font-size: 12pt;
+        line-height: 1.4;
+        color: black;
+        background: white;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Header - simplified for print */
+    .header {
+        background: white !important;
+        color: black !important;
+        padding: 20pt 0;
+        border-bottom: 2pt solid black;
+        margin-bottom: 20pt;
+        text-align: center;
+    }
+
+    .course-code {
+        font-size: 24pt;
+        font-weight: bold;
+        margin-bottom: 8pt;
+    }
+
+    .course-title {
+        font-size: 20pt;
+        font-weight: normal;
+        margin-bottom: 12pt;
+    }
+
+    .course-meta {
+        font-size: 11pt;
+        margin-bottom: 0;
+    }
+
+    .separator {
+        margin: 0 8pt;
+    }
+
+    /* Hide hero section for print */
+    .hero {
+        display: none;
+    }
+
+    /* Main content */
+    .main-content {
+        padding: 0;
+    }
+
+    .content-section {
+        margin-bottom: 24pt;
+        page-break-inside: avoid;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .content-section h2 {
+        font-size: 16pt;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 12pt;
+        margin-top: 20pt;
+        border-bottom: 1pt solid black;
+        padding-bottom: 6pt;
+        page-break-after: avoid;
+    }
+
+    .content-section h3 {
+        font-size: 14pt;
+        font-weight: bold;
+        margin-bottom: 8pt;
+        margin-top: 16pt;
+        page-break-after: avoid;
+    }
+
+    .content-section p {
+        font-size: 11pt;
+        margin-bottom: 8pt;
+        text-align: justify;
+        orphans: 3;
+        widows: 3;
+    }
+
+    .content-section ul,
+    .content-section ol {
+        margin: 8pt 0;
+        padding-left: 20pt;
+    }
+
+    .content-section li {
+        font-size: 11pt;
+        margin-bottom: 4pt;
+        page-break-inside: avoid;
+    }
+
+    /* Instructor section */
+    .instructor-info {
+        background: white !important;
+        box-shadow: none !important;
+        border: 1pt solid black;
+        padding: 12pt;
+        margin-bottom: 16pt;
+        page-break-inside: avoid;
+    }
+
+    .instructor-info h3 {
+        font-size: 14pt;
+        margin-top: 0;
+        margin-bottom: 8pt;
+    }
+
+    .bio {
+        font-style: italic;
+        margin-bottom: 12pt;
+        font-size: 11pt;
+    }
+
+    .contact-grid {
+        display: block;
+    }
+
+    .contact-item {
+        display: block;
+        margin-bottom: 6pt;
+        page-break-inside: avoid;
+    }
+
+    .contact-item .label {
+        font-weight: bold;
+        display: inline;
+    }
+
+    .contact-item .value {
+        display: inline;
+        margin-left: 8pt;
+    }
+
+    /* Tables */
+    .grading-table,
+    .schedule-table {
+        width: 100%;
+        margin: 12pt 0;
+        page-break-inside: avoid;
+        background: white !important;
+        box-shadow: none !important;
+    }
+
+    .grading-table table,
+    .schedule-table table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1pt solid black;
+    }
+
+    .grading-table th,
+    .grading-table td,
+    .schedule-table th,
+    .schedule-table td {
+        padding: 6pt 8pt;
+        border: 1pt solid black;
+        font-size: 10pt;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .grading-table th,
+    .schedule-table th {
+        background: #f0f0f0 !important;
+        font-weight: bold;
+    }
+
+    .grading-table tr.total,
+    .schedule-table tr.final {
+        background: #f5f5f5 !important;
+        font-weight: bold;
+    }
+
+    .schedule-table tr.spring-break {
+        background: #f8f8f8 !important;
+    }
+
+    .schedule-table tr.holiday {
+        background: #f9f9f9 !important;
+    }
+
+    /* Grading scale */
+    .grading-scale {
+        page-break-inside: avoid;
+    }
+
+    .scale-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4pt;
+        margin-top: 12pt;
+        border: 1pt solid black;
+        padding: 8pt;
+    }
+
+    .scale-item {
+        border: 1pt solid black;
+        padding: 6pt;
+        text-align: center;
+        background: white !important;
+    }
+
+    .scale-item .points {
+        display: block;
+        font-size: 9pt;
+        margin-bottom: 2pt;
+    }
+
+    .scale-item .grade {
+        display: block;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    /* Sprint rubric and policies */
+    .rubric-item,
+    .policy {
+        background: white !important;
+        box-shadow: none !important;
+        border: 1pt solid black;
+        padding: 12pt;
+        margin-bottom: 12pt;
+        page-break-inside: avoid;
+    }
+
+    .rubric-item h3,
+    .policy h3 {
+        margin-top: 0;
+        font-size: 12pt;
+    }
+
+    /* Notes */
+    .note {
+        background: #f8f8f8 !important;
+        border-left: 3pt solid black;
+        padding: 8pt;
+        margin: 8pt 0;
+        font-style: italic;
+        font-size: 10pt;
+    }
+
+    /* Links */
+    a {
+        color: black !important;
+        text-decoration: none;
+    }
+
+    a:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666;
+        font-style: italic;
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript"]:after {
+        content: "";
+    }
+
+    /* Hide interactive elements */
+    .skip-link,
+    .scroll-hint {
+        display: none !important;
+    }
+
+    /* Footer */
+    .footer {
+        background: white !important;
+        color: black !important;
+        border-top: 1pt solid black;
+        margin-top: 20pt;
+        padding: 12pt 0;
+        font-size: 10pt;
+    }
+
+    /* Page breaks */
+    .content-section#course-description {
+        page-break-before: avoid;
+    }
+
+    .content-section#schedule {
+        page-break-before: auto;
+    }
+
+    .content-section#policies {
+        page-break-before: auto;
+    }
+
+    /* Ensure proper spacing */
+    h1, h2, h3 {
+        page-break-after: avoid;
+        orphans: 3;
+        widows: 3;
+    }
+
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Table page breaks */
+    table {
+        page-break-inside: avoid;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+
+    /* Print-specific typography */
+    strong, b {
+        font-weight: bold;
+    }
+
+    em, i {
+        font-style: italic;
+    }
+
+    /* Remove animations and transitions */
+    *, *:before, *:after {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    /* Ensure content is visible */
+    [style*="opacity: 0"] {
+        opacity: 1 !important;
+    }
+
+    [style*="transform"] {
+        transform: none !important;
+    }
+}
