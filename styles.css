@@ -257,7 +257,8 @@ body {
 
 /* Tables */
 .grading-table,
-.schedule-table {
+.schedule-table,
+.rubric-table {
     overflow-x: auto;
     margin: 30px 0;
     background: var(--white);
@@ -266,7 +267,8 @@ body {
 }
 
 .grading-table table,
-.schedule-table table {
+.schedule-table table,
+.rubric-table table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -274,22 +276,27 @@ body {
 .grading-table th,
 .grading-table td,
 .schedule-table th,
-.schedule-table td {
+.schedule-table td,
+.rubric-table th,
+.rubric-table td {
     padding: 15px 20px;
     text-align: left;
     border-bottom: 1px solid var(--border-light);
     font-size: 1rem;
+    vertical-align: top;
 }
 
 .grading-table th,
-.schedule-table th {
+.schedule-table th,
+.rubric-table th {
     background: var(--primary-color);
     color: var(--white);
     font-weight: 600;
 }
 
 .grading-table tr.total,
-.schedule-table tr.final {
+.schedule-table tr.final,
+.rubric-table tr.total {
     background: rgba(0, 118, 165, 0.05);
     font-weight: 600;
 }
@@ -300,6 +307,40 @@ body {
 
 .schedule-table tr.holiday {
     background: rgba(255, 193, 7, 0.1);
+}
+
+/* Rubric table specific styles */
+.rubric-table td:first-child {
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.rubric-table td:nth-child(2) {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.rubric-table td:last-child {
+    line-height: 1.6;
+    color: var(--text-dark);
+    font-weight: normal;
+}
+
+.rubric-table td:last-child strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Normal text formatting for bullet points */
+.rubric-table .normal-text {
+    color: var(--text-dark) !important;
+    font-weight: normal !important;
+    font-size: 1rem;
+    text-align: left;
+    display: block;
 }
 
 /* Grading Scale */
